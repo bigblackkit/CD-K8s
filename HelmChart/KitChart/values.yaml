@@ -1,0 +1,5 @@
+# Default Values for my Helm Chart
+
+container:
+  image: bigblackkit/site_on_k8s
+  tag: 66
