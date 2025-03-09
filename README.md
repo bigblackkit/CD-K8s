@@ -2,23 +2,6 @@
 
 CI: https://github.com/bigblackkit/CI-K8s.git
 
-Tree:
-
-CD-K8s
-│   ├── HelmChart
-│   │   └── KitChart
-│   │       ├── Chart.yaml
-│   │       ├── templates
-│   │       │   ├── deployment.yaml
-│   │       │   ├── hpa.yaml
-│   │       │   └── service.yaml
-│   │       └── values.yaml
-│   ├── KitApp
-│   │   ├── applications
-│   │   │   └── kitapp.yaml
-│   │   └── Main.yaml
-│   └── README.md
-
 ########################################################################################################
 
 1. После того как Jenkins Сделает нам новый Docker image,
@@ -27,6 +10,12 @@ Gitlab отправляет Webhook в ArgoCD
 2. ArgoCD сразуже реагирует на внесённые изменения и обновляет Docker image в нашем кламтере K8s
 
 #########################################################################################################
+
+1. After Jenkins makes us a new Docker image,
+it kindly places its tag in the values.yaml file of this repository and, in connection with the changes made,
+Gitlab sends a Webhook to ArgoCD
+2. ArgoCD immediately reacts to the changes made and updates the Docker image in our K8s cluster
+
 
 ![изображение](https://github.com/user-attachments/assets/f2317f71-8351-488b-ac51-cac1452347f6)
 
